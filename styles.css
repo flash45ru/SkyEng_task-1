@@ -1,0 +1,128 @@
+body {
+    background-color: #85a4d4;
+    font-family: 'Roboto', sans-serif;
+}
+h2 {
+    letter-spacing: 5px;
+    font-size: 18px;
+    margin-top: 35px;
+    margin-bottom: 18px;
+    color: #4c6ee6;
+}
+p {
+    line-height: 19px;
+    font-size: 13px;
+    margin-bottom: 16px;
+    color: #a6a8a9;;
+}
+img {
+    margin-top: 40px;
+    width: 70px;
+}
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.tariffs {
+    position: absolute;
+    width: 904px;
+    height: 338px;
+    background-color: #ffffff;
+    margin-top: 55px;
+    border-radius: 4px;
+}
+.product-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 10px 8px 10px;
+    border-radius: 5px;
+    width: 98%;
+    height: 94%;
+}
+.mobile:hover {
+    background-color: #a6a8a94a;
+    border-radius: 5px;
+}
+.desktop:hover {
+    background-color: #a6a8a94a;
+    border-radius: 5px;
+}
+.tv:hover {
+    background-color: #a6a8a94a;
+    border-radius: 5px;
+}
+.mobile, .desktop, .tv {
+    width: 33%;
+    text-align: center;
+}
+.currency {
+    position: absolute;
+    margin: 5px -7px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #5572d6;
+}
+.amount {
+    font-size: 32px;
+    font-weight: 500;
+    color: #5572d6;
+}
+.period {
+    font-size: 13px;
+    font-weight: 500;
+    color: #5572d6;
+}
+/*модальное окно*/
+.modalwindow {
+    text-align: center;
+    position:fixed;
+    display:none; /* Скрываем по умолчанию */
+    z-index:9999;
+    background: #fff;
+    margin-top: 6%;
+    margin-left: 37%;
+    width: 25%;
+    height: 52%;
+}
+.close {
+    float: right;
+    margin-top: -47px;
+    margin-right: 15px;
+    width: 17px;
+    height: 17px;
+    display: block;
+    padding: 10px;
+}
+#bg_layer {
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: #85a4d4;
+}
+@media (max-width: 863px) {
+    body {
+        background-color: #fff;
+    }
+    .tariffs {
+        position: absolute;
+        margin-top: 100px;
+        width: 100%;
+        height: 100%;
+    }
+    .product-list {
+        flex-direction: column;
+    }
+    .mobile, .desktop, .tv {
+        width: 97%;
+        text-align: center;
+    }
+    .modalwindow {
+        margin-top: 40%;
+        margin-left: 17%;
+        width: 61%;
+        height: 50%;
+    }
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Loop 1 - Step 1</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css"/>
+      <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+</head>
+<body>
+<div class="content">
+    <div class="tariffs">
+        <div class="product-list">
+            <div class="mobile">
+                <img src="./img/device.svg">
+                <h2>MOBILE</h2>
+                <p>Get notification about new<br>
+                    releases in our mobile app</p>
+                <div class="price">
+                    <span class="currency">$</span>
+                    <span class="amount">10</span>
+                    <span class="period"> /month</span>
+                </div>
+            </div>
+            <div class="desktop">
+                <img src="./img/laptop.svg">
+                <h2>DESKTOP</h2>
+                <p>Enjoy new episode on you laptop<br>
+                    in browser with our web service,<br>
+                    which supports all the platforms</p>
+                <div class="price">
+                    <span class="currency">$</span><span class="amount">15</span><span
+                        class="period"> /month</span>
+                </div>
+            </div>
+            <div class="tv">
+                <img src="./img/monitor.svg">
+                <h2>TV</h2>
+                <p>Watch your favorite series at home<br>
+                    on large screen with our TV<br>
+                    application</p>
+                <div class="price">
+                    <span class="currency">$</span><span class="amount">20</span><span
+                        class="period"> /month</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal" class="modalwindow">
+    <a href="#" class="close"><img src="./img/cross.svg" style="width: 10px; margin: 43px 18px;"></a>
+    <div class="modal-content"></div>
+</div>
+<div id="bg_layer"></div>
+
+<script type="text/javascript">
+    function CssLoad() {
+        $('.modalwindow').css('display', 'block');
+        $('.modalwindow').fadeIn(500);
+        $('#modal, #bg_layer').show();
+        $('.tariffs').hide();
+    }
+    $('.mobile').click(function (e) {
+        e.preventDefault();
+        var content = $('.mobile').html();
+        $('.modal-content').html(content);
+        CssLoad();
+    });
+    $('.desktop').click(function (e) {
+        e.preventDefault();
+        var content = $('.desktop').html();
+        $('.modal-content').html(content);
+        CssLoad();
+    });
+    $('.tv').click(function (e) {
+        e.preventDefault();
+        var content = $('.tv').html();
+        $('.modal-content').html(content);
+        CssLoad();
+    });
+
+    $('.modalwindow .close').click(function (e) {
+        e.preventDefault();
+        $('#modal, #bg_layer').hide();
+        $('.tariffs').show();
+        $('.modalwindow').fadeOut(500);
+    });
+    $('#modal, #bg_layer').click(function (e) {
+        e.preventDefault();
+        $('#modal, #bg_layer').hide();
+        $('.tariffs').show();
+        $('.modalwindow').fadeOut(500);
+    });
+</script>
+
+</body>
+</html>
+
